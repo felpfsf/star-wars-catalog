@@ -35,8 +35,8 @@ const Details = () => {
               <h3>Bio:</h3>
               <div>
                 <p>{char.homeworld}</p>
-                {char.born && <p>{Math.abs(`${char.born}`)} B.B.Y.</p>}
-                {char.died && <p>{char.died} A.B.Y.</p>}
+                {char.species == 'human' && <p>{Math.abs(`${char.born}`)} B.B.Y.</p>}
+                {char.species == 'human' && <p>{char.died} A.B.Y.</p>}
                 <a href={char.wiki} target="_blank" rel="noopener noreferrer">Wiki</a>
               </div>
               {char.apprentices && char.apprentices.length > 0 &&
