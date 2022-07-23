@@ -7,7 +7,7 @@ const Navbar = () => {
       <Link to={'/'}>
         <img className={styles.logoImg} src='/assets/sw_logo.png' alt='logo'/>
       </Link>
-      <h1>An API Test</h1>
+      <h1>An API Adventure</h1>
     </div>
   )
 }
