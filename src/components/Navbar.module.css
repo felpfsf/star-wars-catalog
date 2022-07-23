@@ -1,0 +1,21 @@
+.header__container {
+  margin: 0 auto;
+  width: 100%;
+  padding-block: 32px;
+
+  border-bottom: 1px solid gold;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__container h1 {
+  color: gold;
+  padding-top: 10px;
+}
+
+.logoImg {
+  width: 320px;
+}
