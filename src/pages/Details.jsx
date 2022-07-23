@@ -32,13 +32,29 @@ const Details = () => {
             </div>
             <div className={styles.char__bio}>
               <h2 className={styles.char__bio__name}>{char.name}</h2>
-              <h3>Bio:</h3>
-              <div>
-                <p>{char.homeworld}</p>
-                {char.species == 'human' && <p>{Math.abs(`${char.born}`)} B.B.Y.</p>}
-                {char.species == 'human' && <p>{char.died} A.B.Y.</p>}
-                <a href={char.wiki} target="_blank" rel="noopener noreferrer">Wiki</a>
+              <div className={styles.char__bio__status}>
+                <p>Homeworld: <span>{char.homeworld}</span></p>
+                {char.species != 'droid' ?
+                  <p>Born in:
+                    <span>{Math.abs(`${char.born}`)} B.B.Y.</span>
+                    <span>{char.bornLocation}</span>
+                  </p>
+                  :
+                  <p>Created in:
+                    <span>{Math.abs(`${char.dateCreated}`)} B.B.Y.</span>
+                    <span>{char.dateDestroyed}</span>
+                  </p>
+
+                }
+                {char.species != 'droid' && char.died != null &&
+                  <p>Died in:
+                    <span>{char.died} A.B.Y.</span>
+                    <span>{char.diedLocation}</span>
+                  </p>
+                }
               </div>
+              <h3>Bio:</h3>
+              <a href={char.wiki} target="_blank" rel="noopener noreferrer">Wiki</a>
               {char.apprentices && char.apprentices.length > 0 &&
                 <>
                   <p>Apprentice(s)</p>

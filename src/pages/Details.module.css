@@ -20,7 +20,7 @@
   overflow: hidden;
 
   display: flex;
-  gap: 8px;
+  /* gap: 8px; */
 }
 
 .char__img__container {
@@ -35,20 +35,25 @@
 
 @media screen and (max-width: 450px) {
   .char__detail__card {
-    width: 90%;
+    width: 100%;
     flex-direction: column;
   }
+
   .char__img__container {
     width: 100%;
   }
+
   .char__bio {
-    padding: 8px;
+    /* padding: 8px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .char__bio__name {
+    width: 100%;
     text-align: center;
     padding-block: 8px;
+    background-color: #736326;
   }
 }
